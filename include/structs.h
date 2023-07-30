@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/27 19:43:07 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/29 17:38:09 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <mlx.h>
 
-# define W 1000
-# define H 800
+# define W 1280
+# define H 1080
 
 typedef struct s_win
 {
@@ -55,17 +55,17 @@ typedef struct s_complex_plane
 
 typedef struct s_moves
 {
-	int		x;
-	int		y;
-	int		z;
+	double	x;
+	double	y;
+	double	z;
 }		t_mv;
 
 typedef struct s_all
 {
-	t_win		win;
+	t_win		wind;
 	t_img		img;
 	t_cplane	fractal;
-	t_mv		moves;
+	t_mv		 mv;
 }		t_all;
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:07:40 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/27 16:34:34 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/29 16:54:06 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,20 @@
 # include "structs.h"
 
 /* mlx Minilibx General */
-t_win			new_program(int w, int h, char *str);
-t_img			new_img(int w, int h, t_win window);
+int				new_program(int w, int h, char *str, t_win *wind);
+int				new_img(int w, int h, t_img *img, void *mlx_ptr);
 void			my_put_pixel_img(t_img *img, int x, int y, int color);
 int				exit_window(t_win *window);
 
 /* fractals */
-void			mandelbrot(t_cplane *mand, t_img *img, t_win win);
+void			mandelbrot(t_cplane *mand, t_img *img, t_mv *mv);
 int				my_colors(int i);
 int				ft_get_gradient(int start, int end, float len, float pos);
 
+/* inicialitzar */
+void			start_all(t_all *all);
+void			start_fractal(t_cplane *fractal);
+void			start_moves(t_mv *mv);
 
 /* Complex numbers */
 double _Complex	ipow(double _Complex inum);

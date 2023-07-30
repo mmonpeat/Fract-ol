@@ -6,66 +6,39 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:58:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/27 19:47:54 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/29 17:35:52 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/fractol.h"
 
-void	start_fractal(t_cplane *fractal)
-{
-	fractal->row = -1;
-	fractal->col = -1;
-	fractal->c_im = 0;
-	fractal->c_re = 0;
-	fractal->iter = 0;
-	fractal->x_s = 0;
-	fractal->x_e = 0;
-	fractal->y_s = 0;
-	fractal->y_e = 0;
-}
-
-// void    start_all(t_all *all)
-// {
-//     t_img       img;
-//     t_win       window;
-//     t_fractal   fractal;
-//     t_move      mv;
-
-//     start_fractal(&fractal);
-//     window = new_program(W, H, "Fractal");
-//     img = new_img(window);
-//     start_mv(&mv);
-//     all->fractal = &fractal;
-//     all->img = &img;
-//     all->win = window;
-//     all->mv = &mv;
-// }
+//dos func de colors
+//les de zoom tmb aqui
 
 int	my_colors(int i)
 {
 	int	color;
 
-	if (i < 20)
-		color = ft_get_gradient(0, 0xFF0000, 20, i);
-	else if (i < 40)
-		color = ft_get_gradient(0xFF0000, 0xEE0000, 20, i - 20);
-	else if (i < 80)
-		color = ft_get_gradient(0xEE0000, 0xDD0000, 40, i - 40);
-	else if (i < 99)
-		color = ft_get_gradient(0xDD0000, 0xCC0000, 19, i - 80);
-	else
-		color = 0;
-	// if (i < 200)
-	// 	color = ft_get_gradient(0, 0xFF0000, 200, i);
-	// else if (i < 400)
-	// 	color = ft_get_gradient(0xFF0000, 0xEE0000, 200, i - 200);
-	// else if (i < 800)
-	// 	color = ft_get_gradient(0xEE0000, 0xDD0000, 400, i - 400);
-	// else if (i < 990)
-	// 	color = ft_get_gradient(0xDD0000, 0xCC0000, 999, i - 800);
+	// if (i < 20)
+	// 	color = ft_get_gradient(0, 0xFF0000, 20, i);
+	// else if (i < 40)
+	// 	color = ft_get_gradient(0xFF0000, 0xEE0000, 20, i - 20);
+	// else if (i < 80)
+	// 	color = ft_get_gradient(0xEE0000, 0xDD0000, 40, i - 40);
+	// else if (i < 99)
+	// 	color = ft_get_gradient(0xDD0000, 0xCC0000, 19, i - 80);
 	// else
 	// 	color = 0;
+	if (i < 200)
+		color = ft_get_gradient(0, 0xFF0000, 200, i);
+	else if (i < 400)
+		color = ft_get_gradient(0xFF0000, 0xEE0000, 200, i - 200);
+	else if (i < 800)
+		color = ft_get_gradient(0xEE0000, 0xDD0000, 400, i - 400);
+	else if (i < 990)
+		color = ft_get_gradient(0xDD0000, 0xCC0000, 999, i - 800);
+	else
+		color = 0;
 	// printf("Color: %#.6X\n", color);
 	return (color);
 }
