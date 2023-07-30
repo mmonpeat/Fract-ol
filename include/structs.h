@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/29 17:38:09 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/30 19:06:37 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,31 @@
 
 # include <mlx.h>
 
+//MACROS
 # define W 1280
 # define H 1080
+
+//teclat
+# define ESC 53				//key escape
+# define W 13				// 'W' key
+# define A 0				// 'A' key
+# define S 1				// 'S' key
+# define D 2				// 'D' key
+# define ARROW_UP 126		// Arrow up key
+# define ARROW_DOWN 125		// Arrow down key
+# define ARROW_LEFT 123		// Arrow left key
+# define ARROW_RIGHT 124	// Arrow right key
+# define CTRL 256			// Control key
+# define CMD 259	// Command key (Windows key on Windows, Command key on macOS)
+
+//mouse
+# define MOUSE_LEFT_BUTTON 1	// Left mouse button
+# define MOUSE_RIGHT_BUTTON 2	// Right mouse button
+# define MOUSE_MIDDLE_BUTTON 3	// Middle mouse button
+# define MOUSE_X1_BUTTON 4		// Mouse X1 button Zoom in
+# define MOUSE_X2_BUTTON 5		// Mouse X2 button Zoom out
+
+# define 
 
 typedef struct s_win
 {

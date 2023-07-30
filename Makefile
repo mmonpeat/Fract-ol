@@ -33,7 +33,7 @@ all:
 
 ${NAME}: ${OBJS} 
 				${CC} ${CFLAGS} ${OBJS} ${RUTAS} -Lmlx -lmlx -framework OpenGL -framework AppKit -o ${NAME}
-				@echo "$(GREEN)fract-ol compiled$(NC)"
+				@echo "$(GREEN)fract-ol compiled ✨$(NC)"
 
 
 -include ${DEPS}
