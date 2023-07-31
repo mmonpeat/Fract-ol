@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:58:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/29 17:35:52 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/31 15:25:16 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,26 @@ int	my_colors(int i)
 {
 	int	color;
 
-	// if (i < 20)
-	// 	color = ft_get_gradient(0, 0xFF0000, 20, i);
-	// else if (i < 40)
-	// 	color = ft_get_gradient(0xFF0000, 0xEE0000, 20, i - 20);
-	// else if (i < 80)
-	// 	color = ft_get_gradient(0xEE0000, 0xDD0000, 40, i - 40);
-	// else if (i < 99)
-	// 	color = ft_get_gradient(0xDD0000, 0xCC0000, 19, i - 80);
-	// else
-	// 	color = 0;
-	if (i < 200)
-		color = ft_get_gradient(0, 0xFF0000, 200, i);
-	else if (i < 400)
-		color = ft_get_gradient(0xFF0000, 0xEE0000, 200, i - 200);
-	else if (i < 800)
-		color = ft_get_gradient(0xEE0000, 0xDD0000, 400, i - 400);
-	else if (i < 990)
-		color = ft_get_gradient(0xDD0000, 0xCC0000, 999, i - 800);
+	if (i < 20)
+		color = ft_get_gradient(0, 0xFF0000, 20, i);
+	else if (i < 40)
+		color = ft_get_gradient(0xFF0000, 0xEE0000, 20, i - 20);
+	else if (i < 80)
+		color = ft_get_gradient(0xEE0000, 0xDD0000, 40, i - 40);
+	else if (i < 99)
+		color = ft_get_gradient(0xDD0000, 0xCC0000, 19, i - 80);
 	else
 		color = 0;
+	// if (i < 200)
+	// 	color = ft_get_gradient(0, 0xFF0000, 200, i);
+	// else if (i < 400)
+	// 	color = ft_get_gradient(0xFF0000, 0xEE0000, 200, i - 200);
+	// else if (i < 800)
+	// 	color = ft_get_gradient(0xEE0000, 0xDD0000, 400, i - 400);
+	// else if (i < 990)
+	// 	color = ft_get_gradient(0xDD0000, 0xCC0000, 999, i - 800);
+	// else
+	// 	color = 0;
 	// printf("Color: %#.6X\n", color);
 	return (color);
 }

@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:54:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/30 18:35:13 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/31 19:57:11 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,21 @@ void	my_put_pixel_img(t_img *img, int x, int y, int color)
 		dst = img->addr + (y * img->line_len + x * (img->bpp / 8));
 		*(unsigned int *) dst = color;
 	}
+}
+
+// static void	add_mlx_hook(t_win *wind)
+// {
+// 	mlx_hook(wind->mlx_ptr, KEYPRESS, 0, key_hook, wind);
+// 	mlx_hook(wind->mlx_ptr, MOTIONNOTIFY, 0, mouse_hook, wind);
+// 	mlx_hook(wind->mlx_ptr, BUTTONPRESS, 0, scroll_hook, wind);
+// 	mlx_hook(wind->mlx_ptr, ESC, 0, exit_window, wind);
+// }
+
+int	read_key(int press_key, t_img *img)
+{
+	if (press_key == ESC || !img)
+		exit_window(&img->win);
+	return (0);
 }
 
 // AMB DESTROY WIDOW
