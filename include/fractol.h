@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:07:40 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/01 15:49:05 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/01 17:39:04 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@
 int				new_program(int w, int h, char *str, t_win *wind);
 int				new_img(int w, int h, t_img *img, void *mlx_ptr);
 void			my_put_pixel_img(t_img *img, int x, int y, int color);
-int				exit_window(t_win *wind);
 
 /* MOVIMENTS */
 // static void		add_mlx_hook(t_win wind);
 int				read_key(int press_key, t_all *all);
-// int				mouse_hook(int x, int y, t_all *all);
+int				mouse_hook(int x, int y, t_all *all);
 // int				scroll_hook(int button, int x, int y, t_all *all);
+int				exit_window(t_win *wind);
 
 /* fractals */
 void			mandelbrot(t_cplane *mand, t_img *img, t_mv *mv, t_win *wind);

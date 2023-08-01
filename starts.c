@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 15:30:31 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/01 16:01:34 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/01 17:57:46 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	start_all(t_all *all)
 	if (new_img(W, H, &all->img, all->wind.mlx_ptr) == 0)
 		return ;
 	start_moves(&all->mv);
+	all->mouse.x = 0.0;
+	all->mouse.y = 0.0;
 }
 
 void	start_fractal(t_cplane *fractal)
