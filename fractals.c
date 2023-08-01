@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:42:14 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/31 18:40:39 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/01 13:50:21 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@ void	mandelbrot(t_cplane *mand, t_img *img, t_mv *mv)
 {
 	double	tmp;
 
-	mv->x = 1.5;
-	mv->y = 2.0;
-	mv->z = 1.2;
 	tmp = 0;
 	while (++mand->row < img->h)
 	{

@@ -6,12 +6,21 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 19:40:15 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/31 19:47:08 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/01 13:08:23 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MACROS_H
 # define MACROS_H
+
+/*
+    EVENTS
+*/
+
+# define KEYPRESS 02
+# define MOTIONNOTIFY 06
+# define BUTTONPRESS 04
+# define DESTROYNOTIFY 17
 
 /*
 ** Keyboard LETTERS
@@ -24,8 +33,8 @@
 # define E 14
 # define F 3
 # define G 5
-# define H 4
-# define I 34
+# define HH 4
+# define II 34
 # define J 38
 # define K 40
 # define L 37
@@ -39,7 +48,7 @@
 # define T 17
 # define U 32
 # define V 9
-# define W 13
+# define WW 13
 # define X 7
 # define Y 16
 # define Z 6

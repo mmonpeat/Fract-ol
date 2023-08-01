@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/31 19:47:18 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/01 12:14:41 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <mlx.h>
 
 //MACROS
-# define W 1280
-# define H 1080
+# define W 1000
+# define H 900
 
 typedef struct s_win
 {
