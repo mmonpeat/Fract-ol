@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/01 12:14:41 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/01 15:12:01 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct s_moves
 	double	x;
 	double	y;
 	double	z;
+	int		ctrl_iter;
 }		t_mv;
 
 typedef struct s_all

@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:54:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/01 13:45:45 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/01 15:03:55 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,30 +59,4 @@ void	my_put_pixel_img(t_img *img, int x, int y, int color)
 // 	mlx_hook(wind->mlx_ptr, DESTROYNOTIFY, 0, exit_window, wind);
 // }
 
-int	read_key(int press_key, t_all *all)
-{
-	if (press_key == ESC)
-		exit_window(&all->wind);
-	else if (press_key == ARROW_LEFT)
-	{
-		printf("ARROW_LEFT\n");
-		all->mv.x -= 0.5;
-	}
-	else if (press_key == ARROW_RIGHT)
-		printf("ARROW_RIGHT\n");
-	else if (press_key == ARROW_UP)
-		printf("ARROW_UP\n");
-	else if (press_key == ARROW_DOWN)
-		printf("ARROW_DOWN\n");
-	else if (press_key == CTRL)
-		printf("CTRL\n");
-	return (0);
-}
 
-// AMB DESTROY WIDOW
-int	exit_window(t_win *wind)
-{
-	if (wind)
-		mlx_destroy_window (wind->mlx_ptr, wind->win_ptr);//DONA ERROR, SEGV
-	exit(EXIT_SUCCESS);
-}
