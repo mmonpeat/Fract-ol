@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/02 17:45:32 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/02 18:00:24 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ typedef struct s_complex_plane
 	int					iter;
 	int					row;
 	int					col;
-	double				x_s;
+	double				x;
 	double				x_e;
-	double				y_s;
+	double				y;
 	double				y_e;
 	double				c_re;//num complex
 	double				c_im;//num complex
@@ -59,7 +59,7 @@ typedef struct s_moves
 	double	x;
 	double	y;
 	double	z;
-	int		ctrl_iter;
+	int		ctrl_i;
 }		t_mv;
 
 typedef struct s_mouse_pos
