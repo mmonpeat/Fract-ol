@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/02 18:00:34 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/02 19:43:34 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,8 @@ int	read_key(int press_key, t_all *all)
 		all->mv.y += 20.0;
 	else if (press_key == NP_MIN)
 		all->mv.ctrl_i -= 50;
-	// all->mv.z -= 0.5;
 	else if (press_key == NP_PLU)
 		all->mv.ctrl_i += 50;
-	// all->mv.z += 0.5;
 	mandelbrot(&all->fractal, &all->img, &all->mv, &all->wind);
 	return (0);
 }
@@ -61,10 +59,20 @@ int	mouse_hook(int x, int y, t_all *all)
 	return (0);
 }
 
-// int	scroll_hook(int button, int x, int y, t_all *all)
-// {
-	
-// }
+int	scroll_hook(int button, int x, int y, t_all *all)
+{
+	if (button == MOUSE_SCROLL_UP)
+	{
+		all->mv.z += 0.5;
+		printf("Zoom in: %f x: %i, y:%i\n", all->mv.z, x, y);
+	}
+	else if (button == MOUSE_SCROLL_DOWN)
+	{
+		all->mv.z -= 0.5;
+		printf("Zoom out: %f, x: %i, y:%i\n", all->mv.z, x, y);
+	}
+	return (0);
+}
 
 int	exit_window(t_win *wind)
 {
