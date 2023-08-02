@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:07:40 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/01 17:39:04 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/02 17:40:41 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int				my_colors(int i);
 int				ft_get_gradient(int start, int end, float len, float pos);
 
 /* inicialitzar */
+void	        menu(int ac);
 void			start_all(t_all *all);
 void			start_fractal(t_cplane *fractal);
 void			start_moves(t_mv *mv);

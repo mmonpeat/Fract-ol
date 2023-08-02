@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/02 14:28:24 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/02 17:45:32 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ typedef struct s_complex_plane
 	int					iter;
 	int					row;
 	int					col;
-	double				x_s;//tmb serveix per ser els la x de la z i per el zoom
+	double				x_s;
 	double				x_e;
-	double				y_s;//tmb serveix per ser els la y de la z i per el zoom
+	double				y_s;
 	double				y_e;
 	double				c_re;//num complex
 	double				c_im;//num complex
