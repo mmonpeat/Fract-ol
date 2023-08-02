@@ -7,7 +7,7 @@ INCLUDE		= -I./ -I libft -I mlx
 OBJ_DIR		= obj/
 
 CC			= gcc -g -fsanitize=address
-CFLAGS		= -Wall -Werror -Wextra
+CFLAGS		= -Wall -Werror -Wextra -O3
 
 SRCS		= main.c mlx_needs.c starts.c fract_needs.c fractals.c moves.c complex.c
 OBJS		= $(addprefix ${OBJ_DIR}/,$(SRCS:.c=.o))

@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/01 18:54:18 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:52:19 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,24 @@ int	read_key(int press_key, t_all *all)
 	if (press_key == ESC)
 		exit_window(&all->wind);
 	else if (press_key == ARROW_LEFT || press_key == A)
-		all->mv.x += 0.1;
+		all->mv.x -= 20.0;
 	else if (press_key == ARROW_RIGHT || press_key == D)
-		all->mv.x -= 0.1;
+		all->mv.x += 20.0;
 	else if (press_key == ARROW_UP || press_key == WW)
-		all->mv.y += 0.1;
+		all->mv.y -= 20.0;
 	else if (press_key == ARROW_DOWN || press_key == S)
-		all->mv.y -= 0.1;
+		all->mv.y += 20.0;
 	else if (press_key == NP_MIN)
 	{
 		printf("Dis iter: %i\n", all->mv.ctrl_iter);
-		all->mv.ctrl_iter -= 10;
-		all->mv.z -= 1.0;
-		printf("1 Dis iter: %i\n", all->mv.ctrl_iter);
-		printf("Zoo_out: %f\n", all->mv.z);
+		// all->mv.ctrl_iter -= 50;
+		all->mv.z -= 0.5;
 	}
 	else if (press_key == NP_PLU)
 	{
 		printf("Aug iter: %i\n", all->mv.ctrl_iter);
-		all->mv.ctrl_iter += 10;
-		all->mv.z += 1.0;
-		printf("1Aug iter: %i\n", all->mv.ctrl_iter);
-		printf("Zoom_in: %f\n", all->mv.z);
+		// all->mv.ctrl_iter += 50;
+		all->mv.z += 0.5;
 	}
 	mandelbrot(&all->fractal, &all->img, &all->mv, &all->wind);
 	return (0);
