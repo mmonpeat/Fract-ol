@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 15:00:33 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:49:50 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	read_key(int press_key, t_all *all)
 		all->mv.i -= 50;
 	else if (press_key == NP_PLU)
 		all->mv.i += 50;
-	julia(&all->fractal, &all->img, &all->mv, &all->wind);
+	ship(&all->fractal, &all->img, &all->mv, &all->wind);
 	return (0);
 }
 
@@ -74,7 +74,7 @@ int	scroll_hook(int button, int x, int y, t_all *all)
 		all->mv.z -= 0.5;
 		// printf("Zoom out: %f, x: %i, y:%i\n", all->mv.z, x, y);
 	}
-	julia(&all->fractal, &all->img, &all->mv, &all->wind);
+	ship(&all->fractal, &all->img, &all->mv, &all->wind);
 	return (0);
 }
 

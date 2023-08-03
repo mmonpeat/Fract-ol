@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 15:30:31 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 15:01:52 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:48:46 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	start_fractal(t_cplane *fractal)
 {
 	fractal->row = -1;
 	fractal->col = -1;
-	fractal->c_im = 0;
-	fractal->c_re = 0;
+	fractal->im = 0;
+	fractal->re = 0;
 	fractal->i = 0;
 	fractal->x = 0;
 	fractal->x_e = 0;
