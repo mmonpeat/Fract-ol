@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:42:14 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 17:46:55 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:47:40 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,10 @@ void	julia(t_cplane *m, t_img *img, t_mv *mv, t_win *w)
 	while (++m->row < img->h)
 	{
 		m->col = -1;
-		m->y = (m->row - img->h / 2.0 + mv->y) * 3.0 / (img->h * mv->z);
 		while (++m->col < img->w)
 		{
 			m->x = (m->col - img->w / 1.5 + mv->x) * 3.0 / (img->w * mv->z);
+			m->y = (m->row - img->h / 2.0 + mv->y) * 3.0 / (img->h * mv->z);
 			m->re = -0.7269;
 			m->im = 0.1889;
 			m->i = -1;

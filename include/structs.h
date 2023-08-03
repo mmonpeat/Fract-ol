@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 16:47:42 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:42:33 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef struct s_complex_plane
 	double				y_e;
 	double				re;//num complex
 	double				im;//num complex
+	char				*name;
 }			t_cplane;
 
 typedef struct s_moves
