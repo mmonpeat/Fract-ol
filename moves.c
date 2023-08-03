@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 12:49:44 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:00:33 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	read_key(int press_key, t_all *all)
 	else if (press_key == ARROW_DOWN || press_key == S)
 		all->mv.y += 20.0;
 	else if (press_key == NP_MIN)
-		all->mv.ctrl_i -= 50;
+		all->mv.i -= 50;
 	else if (press_key == NP_PLU)
-		all->mv.ctrl_i += 50;
+		all->mv.i += 50;
 	julia(&all->fractal, &all->img, &all->mv, &all->wind);
 	return (0);
 }

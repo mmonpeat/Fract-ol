@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/02 18:00:24 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:01:07 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_complex_plane
 {
 	t_img				*img_ptr;
 	void				(*fractal_function)(struct s_complex_plane *);
-	int					iter;
+	int					i;//iteracions per pixel
 	int					row;
 	int					col;
 	double				x;
@@ -59,7 +59,7 @@ typedef struct s_moves
 	double	x;
 	double	y;
 	double	z;
-	int		ctrl_i;
+	int		i;//quantitat d'iterracions aug i dism
 }		t_mv;
 
 typedef struct s_mouse_pos

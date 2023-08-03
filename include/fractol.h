@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:07:40 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 12:39:06 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:20:15 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int				exit_window(t_win *wind);
 /* fractals */
 void			mandelbrot(t_cplane *mand, t_img *img, t_mv *mv, t_win *wind);
 void			julia(t_cplane *m, t_img *img, t_mv *mv, t_win *w);
-int				my_colors(int i);
+int				my_colors(int i, int ctrl_i);
 int				ft_get_gradient(int start, int end, float len, float pos);
 
 /* inicialitzar */

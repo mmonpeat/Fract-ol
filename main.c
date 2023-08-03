@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:54:34 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 12:54:01 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:55:43 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(void)
 	t_all		all;
 
 	start_all(&all);
-	// mandelbrot(&all.fractal, &all.img, &all.mv, &all.wind);
+	mandelbrot(&all.fractal, &all.img, &all.mv, &all.wind);
 	// julia(&all.fractal, &all.img, &all.mv, &all.wind);
 	// add_mlx_hook(all.wind);
 	mlx_hook(all.wind.win_ptr, KEYPRESS, 0, read_key, &all);
