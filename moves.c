@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/02 19:43:34 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/03 12:49:44 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,49 +28,53 @@ int	read_key(int press_key, t_all *all)
 		all->mv.ctrl_i -= 50;
 	else if (press_key == NP_PLU)
 		all->mv.ctrl_i += 50;
-	mandelbrot(&all->fractal, &all->img, &all->mv, &all->wind);
+	julia(&all->fractal, &all->img, &all->mv, &all->wind);
 	return (0);
 }
 
-int	mouse_hook(int x, int y, t_all *all)
-{
-	double	x_fraction;
-	double	x_range;
-	double	y_fraction;
-	double	y_range;
+// int	mouse_hook(int x, int y, t_all *all)
+// {
+// 	double	x_fraction;
+// 	double	x_range;
+// 	double	y_fraction;
+// 	double	y_range;
 
-	x_fraction = 0;
-	x_range = 0;
-	y_fraction = 0;
-	y_range = 0;
-	if (all->fractal.iter > 0)
-	{
-		x_fraction = (double)x / all->wind.w;
-		x_range = all->fractal.x_e - all->fractal.x;
-		all->mouse.x = all->fractal.x - (x_fraction * x_range);
-		y_fraction = (double)y / all->wind.h;
-		y_range = all->fractal.y_e - all->fractal.y;
-		all->mouse.y = all->fractal.y - (y_fraction * y_range);
-		//factal
-		// all->fractal.fractal_function(&all->fractal);
-	}
-	printf("x: %f y: %f\n", all->mouse.x, all->mouse.y);
-	mandelbrot(&all->fractal, &all->img, &all->mv, &all->wind);
-	return (0);
-}
+// 	x_fraction = 0;
+// 	x_range = 0;
+// 	y_fraction = 0;
+// 	y_range = 0;
+// 	if (all->fractal.iter > 0)
+// 	{
+// 		x_fraction = (double)x / all->wind.w;
+// 		x_range = all->fractal.x_e - all->fractal.x;
+// 		all->mouse.x = all->fractal.x - (x_fraction * x_range);
+// 		y_fraction = (double)y / all->wind.h;
+// 		y_range = all->fractal.y_e - all->fractal.y;
+// 		all->mouse.y = all->fractal.y - (y_fraction * y_range);
+// 		//factal
+// 		// all->fractal.fractal_function(&all->fractal);
+// 	}
+// 	// printf("x: %f y: %f\n", all->mouse.x, all->mouse.y);
+// 	mandelbrot(&all->fractal, &all->img, &all->mv, &all->wind);
+// 	return (0);
+// }
 
 int	scroll_hook(int button, int x, int y, t_all *all)
 {
+	(void)x;
+	(void)y;
+	printf("x: %i y: %i\n", x, y);
 	if (button == MOUSE_SCROLL_UP)
 	{
 		all->mv.z += 0.5;
-		printf("Zoom in: %f x: %i, y:%i\n", all->mv.z, x, y);
+		// printf("Zoom in: %f x: %i, y:%i\n", all->mv.z, x, y);
 	}
 	else if (button == MOUSE_SCROLL_DOWN)
 	{
 		all->mv.z -= 0.5;
-		printf("Zoom out: %f, x: %i, y:%i\n", all->mv.z, x, y);
+		// printf("Zoom out: %f, x: %i, y:%i\n", all->mv.z, x, y);
 	}
+	julia(&all->fractal, &all->img, &all->mv, &all->wind);
 	return (0);
 }
 
