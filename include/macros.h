@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 19:40:15 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/01 13:08:23 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 15:38:02 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@
 # define SPACE 49
 # define ESC 53
 # define TAB 48
-# define CTRL 256
+# define CTRL 256 //stpo mouse
 # define CMD 259
 
 /*

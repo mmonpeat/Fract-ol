@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 11:10:46 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 15:49:16 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ typedef struct s_complex_plane
 	int					row;
 	int					col;
 	double				x;
-	double				x_e;
+	double				x_c;
 	double				y;
-	double				y_e;
+	double				y_c;
 	double				re;//num complex
 	double				im;//num complex
 	char				*name;
@@ -61,13 +61,8 @@ typedef struct s_moves
 	double	y;
 	double	z;
 	int		i;//quantitat d'iterracions aug i dism
+	int		stop;
 }		t_mv;
-
-typedef struct s_mouse_pos
-{
-	double		x;
-	double		y;
-}	t_mouse_pos;
 
 typedef struct s_all
 {
@@ -75,7 +70,6 @@ typedef struct s_all
 	t_img		img;
 	t_cplane	fractal;
 	t_mv		mv;
-	t_mouse_pos	mouse;
 }		t_all;
 
 #endif

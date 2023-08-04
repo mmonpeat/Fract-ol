@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 13:15:37 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 15:51:37 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,32 +32,20 @@ int	read_key(int press_key, t_all *all)
 	return (0);
 }
 
-// int	mouse_hook(int x, int y, t_all *all)
-// {
-// 	double	x_fraction;
-// 	double	x_range;
-// 	double	y_fraction;
-// 	double	y_range;
-
-// 	x_fraction = 0;
-// 	x_range = 0;
-// 	y_fraction = 0;
-// 	y_range = 0;
-// 	if (all->fractal.i > 0)
-// 	{
-// 		x_fraction = (double)x / all->wind.w;
-// 		x_range = all->fractal.x_e - all->fractal.x;
-// 		all->mouse.x = all->fractal.x - (x_fraction * x_range);
-// 		y_fraction = (double)y / all->wind.h;
-// 		y_range = all->fractal.y_e - all->fractal.y;
-// 		all->mouse.y = all->fractal.y - (y_fraction * y_range);
-// 		//factal
-// 		// all->fractal.fractal_function(&all->fractal);
-// 	}
-// 	// printf("x: %f y: %f\n", all->mouse.x, all->mouse.y);
-// 	recompile_fractal(all);
-// 	return (0);
-// }
+int	mouse_hook(int x, int y, t_all *all)
+{
+	// printf("x: %d y: %d\n", x, y);
+	if (x < W && x >= 0 && y < H && y >= 0)
+	{//convertim a complex
+		all->fractal.x_c = (x - all->img.w / 1.5 + all->mv.x) * 3.0 / 
+			(all->img.w * all->mv.z);
+		all->fractal.y_c = (y - all->img.h / 1.5 + all->mv.y) * 3.0 / 
+			(all->img.h * all->mv.z);
+	}
+	if (all->mv.stop == 0)
+		recompile_fractal(all);
+	return (0);
+}
 
 int	scroll_hook(int button, int x, int y, t_all *all)
 {
@@ -73,9 +61,16 @@ int	scroll_hook(int button, int x, int y, t_all *all)
 		all->mv.z -= 0.5;
 		all->mv.x -= x - (W / 2);
 		all->mv.y -= y - (H / 2);
-		// printf("X->mv: %f\n Y->mv: %f\n", all->mv.x, all->mv.x);
 	}
-	recompile_fractal(all);
+	if (button == MOUSE_LEFT_BUTTON)
+	{
+		if (all->mv.stop == 0)
+			all->mv.stop = 1;
+		else
+			all->mv.stop = 0;
+	}
+	if (all->mv.stop == 0)
+		recompile_fractal(all);
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:58:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 12:49:32 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 14:41:56 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int	my_colors(int i, int ctrl_i)
 		color = 0;
 	return (color);
 }
+
 /*0xFFDDC1, // Rosa suau
 0xFFE4B5, // Blau clar
 0xE0EEE0, // Verd menta

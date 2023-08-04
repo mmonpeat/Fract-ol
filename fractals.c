@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:42:14 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 12:24:03 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 15:43:58 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,12 @@ void	julia(t_cplane *m, t_img *img, t_mv *mv, t_win *w)
 		{
 			m->x = (m->col - img->w / 2.0 + mv->x) * 3.0 / (img->w * mv->z);
 			m->y = (m->row - img->h / 2.0 + mv->y) * 3.0 / (img->h * mv->z);
-			m->re = -0.7269;
-			m->im = 0.1889;
 			m->i = -1;
 			while (m->i++ < mv->i && ((m->x * m->x) + (m->y * m->y) <= 4 || 
 					m->i < 1))
 			{
-				tmp = (m->x * m->x) - (m->y * m->y) + m->re;
-				m->y = 2 * m->x * m->y + m->im;
+				tmp = (m->x * m->x) - (m->y * m->y) + m->x_c;
+				m->y = 2 * m->x * m->y + m->y_c;
 				m->x = tmp;
 			}
 			my_put_pixel_img(img, m->col, m->row, my_colors(m->i, mv->i));
