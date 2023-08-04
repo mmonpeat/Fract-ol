@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:54:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 19:54:16 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 12:23:50 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,10 @@ void	my_put_pixel_img(t_img *img, int x, int y, int color)
 	}
 }
 
-// void	add_mlx_hook(t_all *all)
-// {
-// 	printf("hola\n");
-// 	mlx_hook(&all->wind.win_ptr, KEYPRESS, 0, read_key, &all);
-// 	// mlx_hook(wind->mlx_ptr, MOTIONNOTIFY, 0, mouse_hook, wind);
-// 	mlx_hook(&all->wind.win_ptr, BUTTONPRESS, 0, scroll_hook, &all);
-// 	mlx_hook(&all->wind.win_ptr, DESTROYNOTIFY, 0, exit_window, &all);
-// }
+void	add_mlx_hook(t_all *all)
+{
+	mlx_hook(all->wind.win_ptr, KEYPRESS, 0, read_key, all);
+	// mlx_hook(wind->mlx_ptr, MOTIONNOTIFY, 0, mouse_hook, wind);
+	mlx_hook(all->wind.win_ptr, BUTTONPRESS, 0, scroll_hook, all);
+	mlx_hook(all->wind.win_ptr, DESTROYNOTIFY, 0, exit_window, all);
+}

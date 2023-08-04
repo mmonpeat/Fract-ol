@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:07:40 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 19:54:18 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 12:46:58 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 # include <math.h>
 # include <complex.h> // Inclou la llibreria complex.h per a utilitzar la constant "I"
 /*BORRAR ???*/
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
 # include "mlx.h"
 # include "libft.h"
 # include "structs.h"
@@ -36,7 +36,7 @@ int				new_img(int w, int h, t_img *img, void *mlx_ptr);
 void			my_put_pixel_img(t_img *img, int x, int y, int color);
 
 /* MOVIMENTS */
-// void			add_mlx_hook(t_all *all);
+void			add_mlx_hook(t_all *all);
 int				read_key(int press_key, t_all *all);
 int				mouse_hook(int x, int y, t_all *all);
 int				scroll_hook(int button, int x, int y, t_all *all);
@@ -61,4 +61,13 @@ void			start_moves(t_mv *mv);
 // double _Complex	iplus(double _Complex inum1, double _Complex inum2);
 // double			norm(double _Complex inum);
 
+/*0xFFDDC1, // Rosa suau
+0xFFE4B5, // Blau clar
+0xE0EEE0, // Verd menta
+0xE6E6FA, // Lila clar
+0xFFDAB9, // Taronja suau
+0xFFE4E1, // Rosat clar
+0xADD8E6, // Blau cel
+0xF0E68C  // Groc pàlid*/
+        
 #endif

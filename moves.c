@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 18:44:47 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 12:30:38 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	read_key(int press_key, t_all *all)
 // 	x_range = 0;
 // 	y_fraction = 0;
 // 	y_range = 0;
-// 	if (all->fractal.iter > 0)
+// 	if (all->fractal.i > 0)
 // 	{
 // 		x_fraction = (double)x / all->wind.w;
 // 		x_range = all->fractal.x_e - all->fractal.x;
@@ -61,17 +61,32 @@ int	read_key(int press_key, t_all *all)
 
 int	scroll_hook(int button, int x, int y, t_all *all)
 {
-	(void)x;
-	(void)y;
-	printf("x: %i y: %i\n", x, y);
+	// printf("x: %i y: %i\n", x, y);
 	if (button == MOUSE_SCROLL_UP)
 	{
+		(void)y;
 		all->mv.z += 0.5;
+		if (x > (W / 2))
+			all->mv.x += x - (W / 2);
+		else
+			all->mv.x -= x + (W / 2);
+		// if (y > (H / 2))
+		// 	all->mv.y += y - (H / 2);
+		// else
+		// 	all->mv.y -= y + (H / 2);
 		// printf("Zoom in: %f x: %i, y:%i\n", all->mv.z, x, y);
 	}
 	else if (button == MOUSE_SCROLL_DOWN)
 	{
 		all->mv.z -= 0.5;
+		if (x > (W / 2))
+			all->mv.x -= x - (W / 2);
+		else
+			all->mv.x += x + (W / 2);
+		// if (y > (H / 2))
+		// 	all->mv.y -= y - (H / 2);
+		// else
+		// 	all->mv.y += y + (H / 2);
 		// printf("Zoom out: %f, x: %i, y:%i\n", all->mv.z, x, y);
 	}
 	recompile_fractal(all);

@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:54:34 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 19:54:25 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 11:58:28 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	main(int ac, char **av)
 {
 	t_all		all;
 
-	(void)av;
 	if (ac != 2)
 		menu(ac);
 	else
@@ -31,11 +30,7 @@ int	main(int ac, char **av)
 		start_all(&all);
 		all.fractal.name = av[1];
 		select_function(all.fractal.name, &all);
-		// add_mlx_hook(&all);
-		mlx_hook(all.wind.win_ptr, KEYPRESS, 0, read_key, &all);
-		// mlx_hook(all.wind.win_ptr, MOTIONNOTIFY, 0, mouse_hook, &all);
-		mlx_hook(all.wind.win_ptr, BUTTONPRESS, 0, scroll_hook, &all);
-		mlx_hook(all.wind.win_ptr, DESTROYNOTIFY, 0, exit_window, &all);
+		add_mlx_hook(&all);
 		mlx_loop(all.wind.mlx_ptr);
 	}
 }

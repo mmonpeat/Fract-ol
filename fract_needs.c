@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:58:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/03 16:47:26 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 12:41:14 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,21 @@ int	my_colors(int i, int ctrl_i)
 	ns = i % 8;
 	iter = ctrl_i / 8;
 	if (i < iter)
-		color = ft_get_gradient(0, 0xFF0000, ns, i);
+		color = ft_get_gradient(0, 0xFFDDC1, ns, i);
 	else if (i < iter * 2)
-		color = ft_get_gradient(0xFF0000, 0xEE0000, ns, i - ns);
-	else if (i < iter * 2)
-		color = ft_get_gradient(0xEE0000, 0xDD0000, ns, i - ns);
-	else if (i < iter * 2)
-		color = ft_get_gradient(0xEE0000, 0xCC0000, ns, i - ns);
-	else if (i < iter * 2)
-		color = ft_get_gradient(0xEE0000, 0xBB0000, ns, i - ns);
-	else if (i < iter * 2)
-		color = ft_get_gradient(0xEE0000, 0xAA0000, ns, i - ns);
-	else if (i < iter * 2)
-		color = ft_get_gradient(0xEE0000, 0x990000, ns, i - ns);
+		color = ft_get_gradient(0xFFDDC1, 0xFFE4B5, ns, i - ns);
+	else if (i < iter * 3)
+		color = ft_get_gradient(0xFFE4B5, 0xE0EEE0, ns, i - ns);
+	else if (i < iter * 4)
+		color = ft_get_gradient(0xE0EEE0, 0xE6E6FA, ns, i - ns);
+	else if (i < iter * 5)
+		color = ft_get_gradient(0xE6E6FA, 0xFFDAB9, ns, i - ns);
+	else if (i < iter * 6)
+		color = ft_get_gradient(0xFFDAB9, 0xFFE4E1, ns, i - ns);
+	else if (i < iter * 7)
+		color = ft_get_gradient(0xFFE4E1, 0xADD8E6, ns, i - ns);
 	else if (i < ctrl_i - 1)
-		color = ft_get_gradient(0xDD0000, 0x880000, ns, i - ns);
+		color = ft_get_gradient(0xADD8E6, 0xF0E68C, ns, i - ns);
 	else
 		color = 0;
 	return (color);
