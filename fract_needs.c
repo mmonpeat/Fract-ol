@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:58:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 14:41:56 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 17:46:06 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //dos func de colors
 //les de zoom tmb aqui
 
-int	my_colors(int i, int ctrl_i)
+int	my_col(int i, int ctrl_i, int (*col)(int))
 {
 	int	color;
 	int	ns;
@@ -24,34 +24,29 @@ int	my_colors(int i, int ctrl_i)
 	ns = i % 8;
 	iter = ctrl_i / 8;
 	if (i < iter)
-		color = ft_get_gradient(0, 0xFFDDC1, ns, i);
+		color = ft_get_gradient(0, col(0), ns, i);
 	else if (i < iter * 2)
-		color = ft_get_gradient(0xFFDDC1, 0xFFE4B5, ns, i - ns);
+		color = ft_get_gradient(col(0), col(1), ns, i - ns);
 	else if (i < iter * 3)
-		color = ft_get_gradient(0xFFE4B5, 0xE0EEE0, ns, i - ns);
+		color = ft_get_gradient(col(1), col(2), ns, i - ns);
 	else if (i < iter * 4)
-		color = ft_get_gradient(0xE0EEE0, 0xE6E6FA, ns, i - ns);
+		color = ft_get_gradient(col(2), col(3), ns, i - ns);
 	else if (i < iter * 5)
-		color = ft_get_gradient(0xE6E6FA, 0xFFDAB9, ns, i - ns);
+		color = ft_get_gradient(col(3), col(4), ns, i - ns);
 	else if (i < iter * 6)
-		color = ft_get_gradient(0xFFDAB9, 0xFFE4E1, ns, i - ns);
+		color = ft_get_gradient(col(4), col(5), ns, i - ns);
 	else if (i < iter * 7)
-		color = ft_get_gradient(0xFFE4E1, 0xADD8E6, ns, i - ns);
+		color = ft_get_gradient(col(5), col(6), ns, i - ns);
+	else if (i < iter * 8)
+		color = ft_get_gradient(col(6), col(7), ns, i - ns);
+	else if (i < iter * 9)
+		color = ft_get_gradient(col(7), col(8), ns, i - ns);
 	else if (i < ctrl_i - 1)
-		color = ft_get_gradient(0xADD8E6, 0xF0E68C, ns, i - ns);
+		color = ft_get_gradient(col(8), col(9), ns, i - ns);
 	else
 		color = 0;
 	return (color);
 }
-
-/*0xFFDDC1, // Rosa suau
-0xFFE4B5, // Blau clar
-0xE0EEE0, // Verd menta
-0xE6E6FA, // Lila clar
-0xFFDAB9, // Taronja suau
-0xFFE4E1, // Rosat clar
-0xADD8E6, // Blau cel
-0xF0E68C  // Groc pàlid*/
 
 int	ft_get_gradient(int start, int end, float len, float pos)
 {

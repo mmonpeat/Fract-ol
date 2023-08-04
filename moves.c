@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 16:03:20 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 17:51:22 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	read_key(int press_key, t_all *all)
 		all->mv.i -= 50;
 	else if (press_key == NP_PLU)
 		all->mv.i += 50;
+	else if (press_key == CTRL)
+		all->mv.col = 1;
 	recompile_fractal(all);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:07:40 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 15:31:12 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 18:10:37 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,10 @@ void			mandelbrot(t_cplane *mand, t_img *img, t_mv *mv, t_win *wind);
 void			julia(t_cplane *m, t_img *img, t_mv *mv, t_win *w);
 void			ship(t_cplane *m, t_img *img, t_mv *mv, t_win *w);
 double			a(double num);
-int				my_colors(int i, int ctrl_i);
+int				my_col(int i, int ctrl_i, int (*col)(int));
 int				ft_get_gradient(int start, int end, float len, float pos);
+int				pastel_colors(int pos);
+int				psychedelic_colors(int pos);
 
 /* inicialitzar */
 void			start_all(t_all *all);

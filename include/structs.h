@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 15:49:16 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 17:44:47 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ typedef struct s_moves
 	double	z;
 	int		i;//quantitat d'iterracions aug i dism
 	int		stop;
+	int		col;
 }		t_mv;
 
 typedef struct s_all

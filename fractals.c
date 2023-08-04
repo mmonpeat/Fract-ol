@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:42:14 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 15:43:58 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 17:46:29 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	mandelbrot(t_cplane *m, t_img *img, t_mv *mv, t_win *w)
 				m->y = 2 * m->x * m->y + m->im;
 				m->x = tmp;
 			}
-			my_put_pixel_img(img, m->col, m->row, my_colors(m->i, mv->i));
+			my_put_pixel_img(img, m->col, m->row, my_col(m->i, mv->i, mv->col));
 		}
 	}
 	mlx_put_image_to_window(w->mlx_ptr, w->win_ptr, img->img_ptr, 0, 0);
@@ -64,7 +64,7 @@ void	julia(t_cplane *m, t_img *img, t_mv *mv, t_win *w)
 				m->y = 2 * m->x * m->y + m->y_c;
 				m->x = tmp;
 			}
-			my_put_pixel_img(img, m->col, m->row, my_colors(m->i, mv->i));
+			my_put_pixel_img(img, m->col, m->row, my_col(m->i, mv->i, mv->col));
 		}
 	}
 	mlx_put_image_to_window(w->mlx_ptr, w->win_ptr, img->img_ptr, 0, 0);
@@ -94,7 +94,7 @@ void	ship(t_cplane *m, t_img *img, t_mv *mv, t_win *w)
 				m->y = a(2 * m->x * m->y + m->im);
 				m->x = a(tmp);
 			}
-			my_put_pixel_img(img, m->col, m->row, my_colors(m->i, mv->i));
+			my_put_pixel_img(img, m->col, m->row, my_col(m->i, mv->i, mv->col));
 		}
 	}
 	mlx_put_image_to_window(w->mlx_ptr, w->win_ptr, img->img_ptr, 0, 0);
