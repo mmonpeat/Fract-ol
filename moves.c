@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 15:51:37 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 16:03:20 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	read_key(int press_key, t_all *all)
 
 int	mouse_hook(int x, int y, t_all *all)
 {
-	// printf("x: %d y: %d\n", x, y);
 	if (x < W && x >= 0 && y < H && y >= 0)
 	{//convertim a complex
 		all->fractal.x_c = (x - all->img.w / 1.5 + all->mv.x) * 3.0 / 

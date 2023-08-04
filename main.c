@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:54:34 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 11:58:28 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 16:04:56 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ void	select_function(char *arg, t_all *all)
 
 void	recompile_fractal(t_all *all)
 {
-	if (strncmp(all->fractal.name, "mandelbrot", 10) == 0)
+	if (ft_strncmp(all->fractal.name, "mandelbrot", 10) == 0)
 		mandelbrot(&all->fractal, &all->img, &all->mv, &all->wind);
-	else if (strncmp(all->fractal.name, "julia", 5) == 0)
+	else if (ft_strncmp(all->fractal.name, "julia", 5) == 0)
 		julia(&all->fractal, &all->img, &all->mv, &all->wind);
 	else if (ft_strncmp(all->fractal.name, "ship", 4) == 0)
 		ship(&all->fractal, &all->img, &all->mv, &all->wind);
