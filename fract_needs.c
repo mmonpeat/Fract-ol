@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:58:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 12:41:14 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 12:49:32 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,14 @@ int	my_colors(int i, int ctrl_i)
 		color = 0;
 	return (color);
 }
+/*0xFFDDC1, // Rosa suau
+0xFFE4B5, // Blau clar
+0xE0EEE0, // Verd menta
+0xE6E6FA, // Lila clar
+0xFFDAB9, // Taronja suau
+0xFFE4E1, // Rosat clar
+0xADD8E6, // Blau cel
+0xF0E68C  // Groc pàlid*/
 
 int	ft_get_gradient(int start, int end, float len, float pos)
 {

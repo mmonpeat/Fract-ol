@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:07:40 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 12:46:58 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 13:00:06 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,19 +55,4 @@ void			start_all(t_all *all);
 void			start_fractal(t_cplane *fractal);
 void			start_moves(t_mv *mv);
 
-/**/
-/* Complex numbers */
-// double _Complex	ipow(double _Complex inum);
-// double _Complex	iplus(double _Complex inum1, double _Complex inum2);
-// double			norm(double _Complex inum);
-
-/*0xFFDDC1, // Rosa suau
-0xFFE4B5, // Blau clar
-0xE0EEE0, // Verd menta
-0xE6E6FA, // Lila clar
-0xFFDAB9, // Taronja suau
-0xFFE4E1, // Rosat clar
-0xADD8E6, // Blau cel
-0xF0E68C  // Groc pàlid*/
-        
 #endif

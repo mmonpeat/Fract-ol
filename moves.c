@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 12:30:38 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 13:15:37 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,33 +61,19 @@ int	read_key(int press_key, t_all *all)
 
 int	scroll_hook(int button, int x, int y, t_all *all)
 {
-	// printf("x: %i y: %i\n", x, y);
 	if (button == MOUSE_SCROLL_UP)
 	{
 		(void)y;
 		all->mv.z += 0.5;
-		if (x > (W / 2))
-			all->mv.x += x - (W / 2);
-		else
-			all->mv.x -= x + (W / 2);
-		// if (y > (H / 2))
-		// 	all->mv.y += y - (H / 2);
-		// else
-		// 	all->mv.y -= y + (H / 2);
-		// printf("Zoom in: %f x: %i, y:%i\n", all->mv.z, x, y);
+		all->mv.x += x - (W / 2);
+		all->mv.y += y - (H / 2);
 	}
 	else if (button == MOUSE_SCROLL_DOWN)
 	{
 		all->mv.z -= 0.5;
-		if (x > (W / 2))
-			all->mv.x -= x - (W / 2);
-		else
-			all->mv.x += x + (W / 2);
-		// if (y > (H / 2))
-		// 	all->mv.y -= y - (H / 2);
-		// else
-		// 	all->mv.y += y + (H / 2);
-		// printf("Zoom out: %f, x: %i, y:%i\n", all->mv.z, x, y);
+		all->mv.x -= x - (W / 2);
+		all->mv.y -= y - (H / 2);
+		// printf("X->mv: %f\n Y->mv: %f\n", all->mv.x, all->mv.x);
 	}
 	recompile_fractal(all);
 	return (0);
