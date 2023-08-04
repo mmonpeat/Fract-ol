@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:58:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 17:46:06 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 19:12:23 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	my_col(int i, int ctrl_i, int (*col)(int))
 	int	ns;
 	int	iter;
 
-	ns = i % 8;
-	iter = ctrl_i / 8;
+	ns = i % 10;
+	iter = ctrl_i / 10;
 	if (i < iter)
 		color = ft_get_gradient(0, col(0), ns, i);
 	else if (i < iter * 2)

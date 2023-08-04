@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:29:04 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 17:44:47 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/04 19:00:12 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 //MACROS
 # define W 1000
 # define H 900
+
+typedef int	(*t_palette)(int);
 
 typedef struct s_win
 {
@@ -57,12 +59,12 @@ typedef struct s_complex_plane
 
 typedef struct s_moves
 {
-	double	x;
-	double	y;
-	double	z;
-	int		i;//quantitat d'iterracions aug i dism
-	int		stop;
-	int		col;
+	double		x;
+	double		y;
+	double		z;
+	int			i;//quantitat d'iterracions aug i dism
+	int			stop;
+	t_palette	col;
 }		t_mv;
 
 typedef struct s_all
