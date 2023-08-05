@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 19:34:45 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/05 13:26:18 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 int	read_key(int press_key, t_all *all)
 {
 	static t_palette	colors[N_PALETTES] = {pastel_colors, \
-		psychedelic_colors};
+		psychedelic_colors, psychedelic_colors2, bluegreen_colors, red_colors};
 	static int			i;
 
 	if (press_key == ESC)
 		exit_window(&all->wind);
 	else if (press_key == ARROW_LEFT || press_key == A)
-		all->mv.x -= 20.0;
-	else if (press_key == ARROW_RIGHT || press_key == D)
 		all->mv.x += 20.0;
+	else if (press_key == ARROW_RIGHT || press_key == D)
+		all->mv.x -= 20.0;
 	else if (press_key == ARROW_UP || press_key == WW)
 		all->mv.y -= 20.0;
 	else if (press_key == ARROW_DOWN || press_key == S)
@@ -35,7 +35,7 @@ int	read_key(int press_key, t_all *all)
 	else if (press_key == CTRL)
 	{
 		i++;
-		all->mv.col = colors[i % 2];
+		all->mv.col = colors[i % 4];
 	}
 	recompile_fractal(all);
 	return (0);
@@ -45,10 +45,8 @@ int	mouse_hook(int x, int y, t_all *all)
 {
 	if (x < W && x >= 0 && y < H && y >= 0 && all->mv.stop == 0)
 	{//convertim a complex
-		all->fractal.x_c = (x - all->img.w / 1.5 + all->mv.x) * 3.0 / 
-			(all->img.w * all->mv.z);
-		all->fractal.y_c = (y - all->img.h / 1.5 + all->mv.y) * 3.0 / 
-			(all->img.h * all->mv.z);
+		all->fractal.x_c = (x - all->mv.x) * 3.0 / (all->mv.z * W);
+		all->fractal.y_c = (y - all->mv.y) * 3.0 / (all->mv.z * H);
 	}
 	if (all->mv.stop == 0)
 		recompile_fractal(all);
@@ -59,16 +57,19 @@ int	scroll_hook(int button, int x, int y, t_all *all)
 {
 	if (button == MOUSE_SCROLL_UP)
 	{
-		(void)y;
-		all->mv.z += 0.5;
-		all->mv.x += x - ((W / 2) + all->mv.x);
-		all->mv.y += y - ((H / 2) + all->mv.y);
+		all->mv.z *= 1.5;
+		x = x - all->mv.x;
+		y = y - all->mv.y;
+		all->mv.x -= ((x * 1.5) - x);
+		all->mv.y -= ((y * 1.5) - y);
 	}
 	else if (button == MOUSE_SCROLL_DOWN)
 	{
-		all->mv.z -= 0.5;
-		all->mv.x -= x - ((W / 2) + all->mv.x);
-		all->mv.y -= y - ((H / 2) + all->mv.y);
+		all->mv.z /= 1.5;
+		x = x - all->mv.x;
+		y = y - all->mv.y;
+		all->mv.x -= ((x / 1.5) - x);
+		all->mv.y -= ((y / 1.5) - y);
 	}
 	if (button == MOUSE_LEFT_BUTTON)
 	{

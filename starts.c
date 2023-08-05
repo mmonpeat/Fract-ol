@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 15:30:31 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 18:52:42 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/05 12:47:39 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ void	start_fractal(t_cplane *fractal)
 
 void	start_moves(t_mv *mv)
 {
-	mv->x = 0.0;
-	mv->y = 0.0;
+	mv->x = W / 1.7;
+	mv->y = H / 2.0;
 	mv->z = 1.0;
 	mv->i = 10;
 	mv->stop = 0;

@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 19:40:15 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 19:03:41 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/05 13:26:23 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /*
     EVENTS
 */
-# define N_PALETTES 2
+# define N_PALETTES 5
 # define KEYPRESS 02
 # define MOTIONNOTIFY 06
 # define BUTTONPRESS 04
