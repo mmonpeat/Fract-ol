@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:07:40 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/05 13:26:42 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/05 14:35:44 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ double			a(double num);
 int				my_col(int i, int ctrl_i, int (*col)(int));
 int				ft_get_gradient(int start, int end, float len, float pos);
 int				pastel_colors(int pos);
+int				lilas_colors(int pos);
 int				psychedelic_colors(int pos);
-int				psychedelic_colors2(int pos);
 int				bluegreen_colors(int pos);
 int				red_colors(int pos);
 

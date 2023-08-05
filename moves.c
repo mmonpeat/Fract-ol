@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:03:25 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/05 13:26:18 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/05 14:36:39 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 int	read_key(int press_key, t_all *all)
 {
 	static t_palette	colors[N_PALETTES] = {pastel_colors, \
-		psychedelic_colors, psychedelic_colors2, bluegreen_colors, red_colors};
+		lilas_colors, psychedelic_colors, bluegreen_colors, red_colors};
 	static int			i;
 
 	if (press_key == ESC)
 		exit_window(&all->wind);
 	else if (press_key == ARROW_LEFT || press_key == A)
-		all->mv.x += 20.0;
-	else if (press_key == ARROW_RIGHT || press_key == D)
 		all->mv.x -= 20.0;
+	else if (press_key == ARROW_RIGHT || press_key == D)
+		all->mv.x += 20.0;
 	else if (press_key == ARROW_UP || press_key == WW)
 		all->mv.y -= 20.0;
 	else if (press_key == ARROW_DOWN || press_key == S)

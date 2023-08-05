@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:58:27 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/04 19:12:23 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/05 15:07:45 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,31 +18,59 @@
 int	my_col(int i, int ctrl_i, int (*col)(int))
 {
 	int	color;
-	int	ns;
 	int	iter;
 
-	ns = i % 10;
 	iter = ctrl_i / 10;
 	if (i < iter)
-		color = ft_get_gradient(0, col(0), ns, i);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(0, col(0), iter, i);
+	}
 	else if (i < iter * 2)
-		color = ft_get_gradient(col(0), col(1), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(0), col(1), iter, i - iter);
+	}
 	else if (i < iter * 3)
-		color = ft_get_gradient(col(1), col(2), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(1), col(2), iter, i - (iter * 2));
+	}
 	else if (i < iter * 4)
-		color = ft_get_gradient(col(2), col(3), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(2), col(3), iter, i - (iter * 3));
+	}
 	else if (i < iter * 5)
-		color = ft_get_gradient(col(3), col(4), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(3), col(4), iter, i - (iter * 4));
+	}
 	else if (i < iter * 6)
-		color = ft_get_gradient(col(4), col(5), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(4), col(5), iter, i - (iter * 5));
+	}
 	else if (i < iter * 7)
-		color = ft_get_gradient(col(5), col(6), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(5), col(6), iter, i - (iter * 6));
+	}
 	else if (i < iter * 8)
-		color = ft_get_gradient(col(6), col(7), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(6), col(7), iter, i - (iter * 7));
+	}
 	else if (i < iter * 9)
-		color = ft_get_gradient(col(7), col(8), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(7), col(8), iter, i - (iter * 8));
+	}
 	else if (i < ctrl_i - 1)
-		color = ft_get_gradient(col(8), col(9), ns, i - ns);
+	{
+		// printf("i: %i && ctrl_i: %i && iter: %i\n", i, ctrl_i, iter);
+		color = ft_get_gradient(col(8), col(9), iter, i - (iter * 9));
+	}
 	else
 		color = 0;
 	return (color);

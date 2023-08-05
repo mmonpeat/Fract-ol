@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 16:33:56 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/08/05 13:26:02 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/08/05 14:35:08 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	pastel_colors(int pos)
 	return (pastel[pos]);
 }
 
-int	psychedelic_colors(int pos)
+int	lilas_colors(int pos)
 {
 	static int	pastel[11] = {0x800080, 0xFFFF00, 0xFF00FF, 0x0000FF, \
 		0xFF0000, 0x00FFFF, 0xFFA500, 0x00FF00, 0xFF1493, 0x00CED1, 0};
@@ -28,7 +28,7 @@ int	psychedelic_colors(int pos)
 	return (pastel[pos]);
 }
 
-int	psychedelic_colors2(int pos)
+int	psychedelic_colors(int pos)
 {
 	static int	pastel[11] = {0xFF1493, 0x00CED1, 0xFF00FF, 0x0000FF, \
 		0xFF0000, 0x00FFFF, 0xFFA500, 0x00FF00, 0x800080, 0xFFFF00, 0};
