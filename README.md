@@ -1,4 +1,5 @@
 📚 **Aquesta guia està disponible en català i en anglès.**
+
 📚 **This guide is available in both Catalan and English.**
 
 # Fract-ol: Guia de l'Usuari 😎
