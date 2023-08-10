@@ -6,14 +6,14 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:50:21 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/18 12:21:03 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2022/10/12 19:54:37 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char		**ft_split(char const *s, char c);
-static int	ft_free_split(char **arr);
+static int	ft_free(char **arr);
 static int	ft_count(char *str, char c);
 static int	ft_lenword(char *str, char c, int i);
 static int	ft_fill_split(char **arr, char const *s, char c);
@@ -56,10 +56,10 @@ static int	ft_fill_split(char **arr, char const *s, char c)
 			len = ft_lenword((char *)s, c, i);
 			arr[n] = ft_substr(s, i, len);
 			if (!arr[n])
-				return (ft_free_split(arr));
+				return (ft_free(arr));
 			n++;
 			i += ft_lenword((char *)s, c, i);
-		}
+		}	
 		else
 			i++;
 	}
@@ -98,7 +98,7 @@ static int	ft_lenword(char *str, char c, int i)
 	return (cont);
 }
 
-static int	ft_free_split(char **arr)
+static int	ft_free(char **arr)
 {
 	int		i;
 

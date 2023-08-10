@@ -24,7 +24,6 @@ SRCS	= ft_isalpha.c ft_isdigit.c \
 		ft_striteri.c ft_itoa.c \
 		ft_strjoin.c ft_strtrim.c \
 		ft_split.c \
-		get_next_line.c get_next_line_utils.c
 
 BONUS	= ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 		ft_lstsize_bonus.c ft_lstlast_bonus.c \

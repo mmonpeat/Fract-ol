@@ -6,11 +6,11 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 19:48:44 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/18 12:21:22 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:10:54 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

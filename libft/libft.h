@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:50:26 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/18 12:25:55 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2022/10/27 18:33:05 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include <limits.h>
-
-// # ifndef BUFFER_SIZE
-// #  define BUFFER_SIZE	(int)1
-// # endif
 
 typedef struct s_list
 {
@@ -74,12 +69,4 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-// char	*get_next_line(int fd);
-// char	*ft_read_file(int fd, char *storage);
-// char	*ft_get_line(char *storage);
-// char	*ft_clean_storage(char *storage);
-// void	*ft_free(char **str);
-// char	*ft_strjoin_free(char *storage, char *buffer);
-// char	*ft_strchr_gnl(char *s, int c);
 #endif
