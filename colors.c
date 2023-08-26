@@ -22,10 +22,10 @@ int	pastel_colors(int pos)
 
 int	lilas_colors(int pos)
 {
-	static int	pastel[11] = {0x800080, 0xFFFF00, 0xFF00FF, 0x0000FF, \
+	static int	lilas[11] = {0x800080, 0xFFFF00, 0xFF00FF, 0x0000FF, \
 		0xFF0000, 0x00FFFF, 0xFFA500, 0x00FF00, 0xFF1493, 0x00CED1, 0};
 
-	return (pastel[pos]);
+	return (lilas[pos]);
 }
 
 int	psychedelic_colors(int pos)
