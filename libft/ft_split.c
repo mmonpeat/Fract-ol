@@ -20,13 +20,9 @@ static int	ft_fill_split(char **arr, char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
-	int		n;
-	int		i;
 	int		num_par;
 	char	**arr;
 
-	n = 0;
-	i = 0;
 	num_par = ft_count((char *)s, c);
 	arr = (char **)malloc(sizeof(char *) * (num_par + 1));
 	if (!arr)
